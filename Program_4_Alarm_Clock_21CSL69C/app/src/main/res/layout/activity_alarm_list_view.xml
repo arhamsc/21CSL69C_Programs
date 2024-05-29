@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    tools:context=".nested_layout.AlarmListView"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/secondary"
+        android:text="Hey this is an non repeating alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="64dp"
+        android:text="12th Jan 2024" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarmToggle" />
+
+        <ImageButton
+            style="?android:attr/buttonBarButtonStyle"
+            android:contentDescription="Delete button"
+            android:src="@drawable/baseline_delete_24"
+            android:minWidth="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarmDelete" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

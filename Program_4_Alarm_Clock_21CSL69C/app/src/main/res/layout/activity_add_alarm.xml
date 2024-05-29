@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".AddAlarmActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:text="Add Alarm"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:textColor="@color/secondary"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:textColorHint="@color/secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/alarmTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/secondary"
+        app:layout_constraintTop_toBottomOf="@id/timePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text"
+        android:textColorHint="@color/secondary"
+        android:hint="Alarm Title" />
+
+    <CheckBox
+        android:id="@+id/alarmRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmTitle"
+        android:textColorHint="@color/secondary"
+        android:hint="Repeat?" />
+
+    <EditText
+        android:id="@+id/alarmInterval"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:textColor="@color/secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmRepeat"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:inputType="number"
+        android:enabled="false"
+        android:textColorHint="@color/secondary"
+        android:hint="Interval (min)" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addAlarmBtn"
+        android:textColor="@color/secondary"
+        android:layout_marginHorizontal="12sp"
+        android:textSize="24sp"
+        android:text="Add Alarm"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
